@@ -6,7 +6,7 @@
 > The author assumes no responsibility for any breaking changes that may occur. Any feedback or issues related to the AVM should be reported to the respective module's GitHub repository.
 
 
-# Customized Azure Virtual WAN Hub Networking using AVM modiles
+# Azure Virtual WAN with Viruta kHub Networking using Azure Verified Modules
 
 This module is designed to simplify the creation of virtual wan based networks in Azure.
 
