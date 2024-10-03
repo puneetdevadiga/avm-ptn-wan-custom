@@ -10,14 +10,12 @@
 
 This module is designed to simplify the creation of virtual wan based networks in Azure.
 
-## Features
+## Components deployed
 
-- Virtual WAN:
-- Virtual WAN Hub:
-  - Virtual WAN Hub.
-  - Secured Virtual Hub.
-  - Routing intent
-- Azure Firewall
-  - Secured Virtual Hub
+- Virtual WAN
+- Virtual Hub [secureHub][multiple : dev,prod,sbx,etc.]
+- Routing Intent [multiple : dev,prod,sbx,etc.]
+- Azure Firewall [multiple : dev,prod,sbx,etc.]
+
 
 
