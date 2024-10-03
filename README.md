@@ -12,5 +12,5 @@ This module is designed to simplify the creation of virtual wan based networks i
   - Routing intent
 - Azure Firewall
   - Secured Virtual Hub
-  - AzureFirewallSubnet.
+
 
