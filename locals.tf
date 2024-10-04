@@ -1,3 +1,15 @@
+# Adding an additional block for importing the firewall policy ID
+  data "terraform_remote_state" "custom-avm-res-network-firewallpolicy" {
+    backend = "azurerm"
+
+    config = {
+      resource_group_name   = "custom-statestore-rg"
+      storage_account_name  = "customstgacctfstatepqf"
+      container_name        = "stage02"
+      key                   = "custom-avm-res-network-firewallpolicy.tfstate"
+    }
+  }
+
 locals {
     tags = {
     environment = "common"
@@ -32,6 +44,7 @@ locals {
       virtual_hub_key = var.dev_hub_key
       sku_name        = "AZFW_Hub"
       sku_tier        = "Standard"
+      firewall_policy_id = data.terraform_remote_state.custom-avm-res-network-firewallpolicy.outputs.dev_firewall_policy_id
     },
     (var.nprd_firewall_key) = {
       firewall_key    = var.nprd_firewall_key
@@ -39,6 +52,7 @@ locals {
       virtual_hub_key = var.nprd_hub_key
       sku_name        = "AZFW_Hub"
       sku_tier        = "Standard"
+      firewall_policy_id = data.terraform_remote_state.custom-avm-res-network-firewallpolicy.outputs.nprd_firewall_policy_id
     }
   }
 
