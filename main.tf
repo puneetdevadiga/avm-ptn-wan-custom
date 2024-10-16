@@ -58,4 +58,3 @@ depends_on = [
     module.avm-res-resources-resourcegroup-nprd
 ]
 }
-
